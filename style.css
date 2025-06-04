@@ -1,0 +1,205 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #3e1863; 
+      padding: 10px 20px;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      
+    }
+
+    .ssc-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      color: #ffd700; 
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .nav-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        flex-direction: column;
+      }
+
+      .ssc-logo {
+        margin: 0 0 10px 0;
+      }
+
+      .logo span {
+        font-size: 16px;
+      }
+    }
+
+
+    .event-banner {
+    background-color: #fff;
+    border-left: 6px solid #ffd700; 
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    animation: fadeInBanner 1s ease;
+    font-family: Arial, sans-serif;
+  }
+
+  .event-banner h1 {
+    color: #6a3093; 
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .event-banner .subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3e1863; 
+  }
+
+  .event-banner span,
+  .event-banner strong {
+    color: #111;
+  }
+
+  @keyframes fadeInBanner {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .event-banner {
+      margin: 15px;
+      padding: 15px;
+    }
+
+    .event-banner h1 {
+      font-size: 20px;
+    }
+
+    .event-banner .subtitle {
+      font-size: 14px;
+    }
+  }
+
+
+
+.team-heading {
+  text-align: center;
+  font-size: 22px;
+  color: #3e1863;
+  margin: 30px 0;
+}
+
+.team-heading::before,
+.team-heading::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background-color: #ffd700; 
+  margin: 10px auto;
+}
+
+
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.member {
+  width: 200px;
+  background-color: #fff;
+  border: 2px solid #ffd700;
+  border-radius: 15px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.member:hover {
+  transform: scale(1.05);
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #6a3093;
+}
+
+.member h3 {
+  font-size: 16px;
+  color: #3e1863;
+  margin-bottom: 5px;
+}
+
+.member p {
+  font-size: 13px;
+  color: #333;
+  margin: 3px 0;
+}
+
+.btn-black {
+  background-color: #ffd700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.btn-black a {
+  text-decoration: none;
+  color: #3e1863;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.member:hover p,
+.member:hover h3,
+.member:hover .btn-black {
+  color: #6a3093;
+}
+
+@media (max-width: 768px) {
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    width: 80%;
+  }
+}
